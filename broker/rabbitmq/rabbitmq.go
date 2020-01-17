@@ -312,6 +312,10 @@ func (r *rbroker) getExchange() Exchange {
 		ex.Durable = d
 	}
 
+	if k, ok := r.opts.Context.Value(exchangeKind{}).(string); ok {
+		ex.Kind = k
+	}
+
 	return ex
 }
 
