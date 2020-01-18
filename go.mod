@@ -197,8 +197,3 @@ replace github.com/micro/go-plugins/agent/command/whereareyou => ./agent/command
 replace github.com/micro/go-plugins/agent/command/animate => ./agent/command/animate
 
 replace github.com/micro/go-plugins/proxy/http => ./proxy/http
-
-require (
-	github.com/leifjacky/go-plugins/broker/rabbitmq v0.0.0-20200118092320-b15333d65980 // indirect
-	github.com/micro/go-plugins/broker/rabbitmq v0.0.0-20200117235637-67cf94f6861a // indirect
-)
