@@ -60,11 +60,11 @@ func (r *rabbitMQChannel) Publish(exchange, key string, message amqp.Publishing)
 	return r.channel.Publish(exchange, key, false, false, message)
 }
 
-func (r *rabbitMQChannel) DeclareExchange(exchange exchange) error {
+func (r *rabbitMQChannel) DeclareExchange(exchange Exchange) error {
 	return r.channel.ExchangeDeclare(
-		exchange.name, // name
-		exchange.kind,
-		exchange.durable, // durable
+		exchange.Name, // name
+		exchange.Kind,
+		exchange.Durable, // durable
 		false,            // autoDelete
 		false,            // internal
 		false,            // noWait
